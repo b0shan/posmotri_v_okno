@@ -10,15 +10,16 @@ html {
 
 .page {
   display: flex;
-  inline-size: 1200px;
-  block-size: 100%;
+  inline-size: 1140px;
+  block-size: 534px;
+  box-sizing: border-box;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   align-items: center;
-  
+  padding-top: 344px;
 
 }
 
@@ -58,24 +59,31 @@ ol {
 .result{  /*левая часть*/
   display: flex;
   flex-direction: column;
-  width: 200%;
-  padding-bottom: 110px;
+  /*width: 200%;*/
+  padding-bottom: 69px;
+  flex: 150;
+  row-gap: 16px;
 }
 
-
+.result__video-container{
+  box-sizing: border-box;
+  width: 711px;
+  height: 418px;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  padding-top: 30px;
+}
 .result__video {
   block-size: 100%;
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-
-.result__video-container{
-  block-size: 386px;
-  height: 100%;
   
 }
+
+
+
 
 .search-form{
   display: flex;
@@ -95,10 +103,14 @@ ol {
 
 }
 
+
+/*правая сторона*/
 .content__details{
   block-size: 100%;
-  inline-size: 100%;
+  inline-size: 399px;
   /*align-items: stretch;*/
+  flex: 0;
+  padding-bottom: 98px;
 }
 
 
