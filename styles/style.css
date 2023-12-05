@@ -19,8 +19,6 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   align-items: center;
-  /*padding-top: 274px;*/
-
 }
 
 h1,
@@ -47,8 +45,8 @@ ol {
   flex-direction: row;
   inline-size: 100%;
   justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
+  align-items: flex-end;
+  column-gap: 30px;
 }
 
 /*левая часть*/
@@ -56,7 +54,7 @@ ol {
 .result {  
   display: flex;
   flex-direction: column;
-  row-gap: 22px;
+  row-gap: 20px;
 }
 
 .result__video-container {
@@ -67,8 +65,8 @@ ol {
   object-fit: cover;
   object-position: center;
   display: flex;
-  /*padding-top: 75px;*/
-  margin-block-end: 10px;
+  margin-block-end: 0%;
+  
 }
 .result__video {
   block-size: 100%;
@@ -217,6 +215,13 @@ ol {
   text-decoration: underline;
 }
 
+/*правая сторона*/
+
+.content__details {
+  block-size: 100%;
+  inline-size: 399px;
+}
+
 .title {
   display: block;
   color: #FFF;
@@ -227,14 +232,6 @@ ol {
   line-height: 94%;
   text-transform: uppercase;
   padding-bottom: 20px;
-  /*background-color: #8b0808;*/
-}
-
-/*правая сторона*/
-
-.content__details {
-  block-size: 534px;
-  inline-size: 399px;
 }
 
 .content__accent{
@@ -253,7 +250,7 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
-  block-size: 318px;
+  block-size: 298px;
   overflow-y: auto;
   overflow-x: hidden;
   
