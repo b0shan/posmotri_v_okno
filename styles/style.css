@@ -93,7 +93,7 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-bottom: 1px;
+  padding-bottom: 3px;
 }
 
 .search-form__label {
@@ -102,6 +102,7 @@ ol {
   flex-direction: row;
   cursor: pointer;
   outline: none;
+  border: none;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -112,12 +113,13 @@ ol {
   border-bottom: solid white 1px;
 }
 
-.search-form__textfield{
+.search-form__textfield {
   cursor: text;
   appearance: none;
   inline-size: 224px;
   padding: 2px;
   background: transparent;
+  outline: none;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -130,13 +132,15 @@ ol {
 }
 
 .search-form__textfield:active {
-  border-left: 1px solid #8b0808;
+  outline: none;
+  border: none;
+  border-left: 1px solid ;
   outline-offset: -1px;
 }
 
 .search-form__textfield:focus {
   outline: 1px solid #FFF;
-  outline-offset: 2px;
+  outline-offset: -1px;
 }     
 
 .search-form__checkbox-list {
@@ -188,12 +192,12 @@ ol {
 
 .button:active {
   background: #545050;
-  outline: none;
+  text-decoration: none;
 }
 
 .button:focus {
   outline: 1px solid #FFF;
-  outline-offset: 1px;      
+  outline-offset: -1px;      
 }     
 
 .more-button {
@@ -231,11 +235,14 @@ ol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
   block-size: 298px;
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+} 
 
 .content__card-link {
   display: block;
@@ -256,14 +263,10 @@ ol {
   background-color: #545050;
 }
 
-.content__list-item:not(:last-child) {
-  margin-block-end: 8px;
-} 
-
 .content__video-card {
   display: flex;
   align-items: flex-start;
-  block-size: 105px;
+  block-size: 103px;
   inline-size: 399px;
   justify-content: space-between;
 }
@@ -280,6 +283,7 @@ ol {
   font-weight: 700;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
+  padding-bottom: 5px;
 }
 
 .content__video-card-description {
@@ -294,7 +298,6 @@ ol {
 
 .content__video-card-description:before {
   visibility: visible;
-  display: inline-block;
   content: "Вот, что видит кто-то из команды Практикума, когда не смотрит на код, а смотрит в окно.";
   color: #FFF;
   font-family: Fira Sans Condensed, sans-serif;
@@ -302,11 +305,10 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: 16.2px; 
-  padding-top: 5px;
 }
 
 .content__video-card-thumbnail {
-  block-size: 104px;
+  block-size: 103px;
   inline-size: 194px;
   align-items: flex-start;
   object-fit: cover;
