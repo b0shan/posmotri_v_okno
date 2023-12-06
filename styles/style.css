@@ -49,12 +49,10 @@ ol {
   column-gap: 30px;
 }
 
-/*левая часть*/
-
 .result {  
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 16px;
 }
 
 .result__video-container {
@@ -83,20 +81,23 @@ ol {
 
 .search-form__fieldset {
   border: none;
-  block-size: 50px;
+  block-size: 54px;
 }
 
 .search-form__fieldset-title {
   color: #FFF;
-  font-family: Fira Sans Condensed, sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-bottom: 3px;
+  padding-bottom: 5px;
 }
 
 .search-form__label {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
   width: fit-content;
   display: flex;
   flex-direction: row;
@@ -107,7 +108,8 @@ ol {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid white;
-}
+  outline-offset: 2px;
+}   
 
 .search-form__label:hover > .search-form__label-text {
   border-bottom: solid white 1px;
@@ -117,7 +119,7 @@ ol {
   cursor: text;
   appearance: none;
   inline-size: 224px;
-  padding: 2px;
+  padding: 1px;
   background: transparent;
   outline: none;
   border: none;
@@ -131,17 +133,15 @@ ol {
   line-height: normal;
 }
 
+.search-form__textfield:focus {
+  outline: 1px solid #FFF;
+  outline-offset: 2px;
+}     
+
 .search-form__textfield:active {
   outline: none;
   border: none;
-  border-left: 1px solid ;
-  outline-offset: -1px;
 }
-
-.search-form__textfield:focus {
-  outline: 1px solid #FFF;
-  outline-offset: -1px;
-}     
 
 .search-form__checkbox-list {
   display: flex;
@@ -177,7 +177,7 @@ ol {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  border: 1px solid ;
+  border: 1px solid;
 }
 
 .search-form__submit-button {
@@ -186,19 +186,20 @@ ol {
   block-size: 35px;
 }
 
+.button:focus {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;      
+}     
+
 .button:hover {
   text-decoration: underline;
 }
 
 .button:active {
+  outline: none;
   background: #545050;
   text-decoration: none;
 }
-
-.button:focus {
-  outline: 1px solid #FFF;
-  outline-offset: -1px;      
-}     
 
 .more-button {
   inline-size: 399px;
@@ -206,8 +207,6 @@ ol {
   justify-content: center;
   align-items: center;
 }
-
-/*правая сторона*/
 
 .content__details {
   block-size: 100%;
@@ -217,7 +216,7 @@ ol {
 .title {
   display: block;
   color: #FFF;
-  font-family: Oswald, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -226,7 +225,7 @@ ol {
   padding-bottom: 20px;
 }
 
-.content__accent{
+.content__accent {
   color: #545050;
 }
 
@@ -248,7 +247,12 @@ ol {
   display: block;
   text-decoration: none; 
   color: #fff;
-  margin: 2px;  
+  margin: 2px;
+} 
+
+.content__card-link:focus {
+  outline: none;
+  border: 1px solid #fff;
 }
 
 .content__card-link:hover {
@@ -268,7 +272,7 @@ ol {
   align-items: flex-start;
   block-size: 103px;
   inline-size: 399px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .content__video-card-description-container { 
@@ -277,18 +281,20 @@ ol {
 
 .content__video-card-title {
   color: #FFF;
-  font-family: Oswald, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
+  padding-top: 3px;
   padding-bottom: 5px;
 }
 
 .content__video-card-description {
+  position: absolute; 
   color: #FFF;
-  font-family: Fira Sans Condensed, sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -296,15 +302,13 @@ ol {
   visibility: hidden;
 }
 
-.content__video-card-description:before {
-  visibility: visible;
-  content: "Вот, что видит кто-то из команды Практикума, когда не смотрит на код, а смотрит в окно.";
+.content__video-card-description-visible {
   color: #FFF;
-  font-family: Fira Sans Condensed, sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16.2px; 
+  line-height: 16.2px; /* 90% */
 }
 
 .content__video-card-thumbnail {
